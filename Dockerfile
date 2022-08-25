@@ -26,13 +26,12 @@ RUN echo "nicotine:nicotine" | /usr/sbin/chpasswd
 RUN echo "nicotine    ALL=(ALL) ALL" >> /etc/sudoers
 
 ENV \
-    CUSTOM_PORT="8080" \
+    CUSTOM_PORT="5900" \
     GUIAUTOSTART="true" \
-    HOME="/vaults" \
-    TITLE="Obsidian v$OBSIDIAN_VERSION"
+    HOME="/home/nicotine" \
+    TITLE="Nicotine+"
 
 #Start run
-WORKDIR /home/nicotine
 USER root
 CMD /usr/bin/nicotine
 
