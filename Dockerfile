@@ -30,7 +30,6 @@ ENV \
     GUIAUTOSTART="true" \
     HOME="/home/nicotine" \
     TITLE="Nicotine+" \
-    DISPLAY=$DISPLAY
 COPY root/ /
 #Start run
 USER root
