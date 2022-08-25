@@ -3,7 +3,7 @@ name: publish-testing
 on:
   push:
     branches: [testing-rebuild]
-      paths: Dockerfile
+    paths: Dockerfile
 
 
 jobs:
