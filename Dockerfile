@@ -30,7 +30,7 @@ ENV \
     GUIAUTOSTART="true" \
     HOME="/home/nicotine" \
     TITLE="Nicotine+"
-
+COPY root/ /
 #Start run
 USER root
 CMD /usr/bin/nicotine
