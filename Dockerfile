@@ -29,7 +29,8 @@ ENV \
     CUSTOM_PORT="5900" \
     GUIAUTOSTART="true" \
     HOME="/home/nicotine" \
-    TITLE="Nicotine+"
+    TITLE="Nicotine+" \
+    DISPLAY=$DISPLAY
 COPY root/ /
 #Start run
 USER root
