@@ -9,7 +9,7 @@ LABEL org.opencontainers.image.description="Containerized Nicotine+ instance"
 
 #update and install necessary packages
 RUN apt -yy update \
-&& apt -yq install software-properties-common \
+&& apt -yq install software-properties-common dbus-x11 uuid-runtime \
 && add-apt-repository ppa:nicotine-team/stable \
 && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6CEB6050A30E5769 \
 && apt update -yy \
@@ -24,6 +24,12 @@ RUN addgroup nicotine
 RUN useradd -s /bin/bash -m -g nicotine nicotine
 RUN echo "nicotine:nicotine" | /usr/sbin/chpasswd
 RUN echo "nicotine    ALL=(ALL) ALL" >> /etc/sudoers
+
+ENV \
+    CUSTOM_PORT="8080" \
+    GUIAUTOSTART="true" \
+    HOME="/vaults" \
+    TITLE="Obsidian v$OBSIDIAN_VERSION"
 
 #Start run
 WORKDIR /home/nicotine
