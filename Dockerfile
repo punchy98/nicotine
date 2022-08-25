@@ -19,9 +19,10 @@ RUN useradd -s /bin/bash -m -g nicotine nicotine
 RUN echo "nicotine:nicotine" | /usr/sbin/chpasswd
 RUN echo "nicotine    ALL=(ALL) ALL" >> /etc/sudoers
 
-RUN nicotine
+#Start run
 WORKDIR /home/nicotine
 USER root
+RUN nicotine
 
 #Set port for connecting
 EXPOSE 5900
