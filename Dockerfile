@@ -1,6 +1,12 @@
-LABEL org.opencontainers.image.authors="Michael Maldonado"
-
 FROM ghcr.io/linuxserver/baseimage-rdesktop-web
+
+
+LABEL org.opencontainers.image.authors="michael@maldonado.tech"
+LABEL org.opencontainers.image.source="https://github.com/punchy98/nicotine"
+LABEL org.opencontainers.image.title="Containerized Nicotine+ instance"
+LABEL org.opencontainers.image.description="Containerized Nicotine+ instance"
+
+
 #update and install necessary packages
 RUN apt -yy update \
 && apt -yq install software-properties-common \
