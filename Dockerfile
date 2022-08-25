@@ -28,7 +28,7 @@ RUN echo "nicotine    ALL=(ALL) ALL" >> /etc/sudoers
 #Start run
 WORKDIR /home/nicotine
 USER root
-RUN nicotine
+CMD /usr/bin/nicotine
 
 #Set port for connecting
 EXPOSE 5900
